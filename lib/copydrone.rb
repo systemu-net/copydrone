@@ -1,15 +1,16 @@
 require 'copydrone/version'
+require 'copydrone/configuration'
 
 module Copydrone
-  def self.included(base)
-    base.class_eval do
-      extend ClassMethods
-    end
+  def self.configure(apply = true)
+    self.configuration ||= Configuration.new
+
+    yield configuration
+
+    configuration.apply if apply
   end
 
-  module ClassMethods
-    def hi
-      puts "Hello From Copydrone"
-    end
+  if defined? Rails
+    require 'copydrone/rails'
   end
 end

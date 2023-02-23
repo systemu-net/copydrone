@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Sergii Demianchuk"]
   spec.email = "sergeydemjanchyk@gmail.com"
   spec.description = "Copydrone implementes a service object locator pattern"
-  spec.summary = "Simple copydrone implementation"
+  spec.summary = "Main copydrone implementation"
   spec.homepage = "https://github.com/systemu-net/copydrone"
   spec.license = "MIT"
 
